@@ -16,6 +16,13 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - hey there
+    - greetings
+    - hi there
+    - hello friend
+    - hi friend
+    - good day
+    - good to see you
 
 - intent: goodbye
   examples: |
@@ -29,6 +36,13 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - talk to you later
+    - catch you later
+    - until next time
+    - take care
+    - farewell
+    - adios
+    - hasta luego
 
 - intent: affirm
   examples: |
@@ -38,6 +52,15 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - exactly
+    - absolutely
+    - sure
+    - definitely
+    - you're right
+    - that's right
+    - that's correct
+    - right
+    - affirmative
 
 - intent: deny
   examples: |
@@ -48,6 +71,14 @@ nlu:
     - don't like that
     - no way
     - not really
+    - not at all
+    - absolutely not
+    - never
+    - negative
+    - that's not right
+    - that's incorrect
+    - wrong
+    - incorrect
 
 - intent: mood_great
   examples: |
@@ -65,6 +96,12 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - excellent
+    - fantastic
+    - marvelous
+    - splendid
+    - terrific
+    - outstanding
 
 - intent: mood_unhappy
   examples: |
@@ -82,6 +119,12 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - terrible
+    - awful
+    - miserable
+    - down
+    - depressed
+    - gloomy
 
 - intent: bot_challenge
   examples: |
@@ -89,3 +132,48 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - is this a robot?
+    - are you real?
+    - are you artificial?
+    - are you automated?
+    - are you a machine?
+    - are you a computer program?
+
+- intent: ask_help
+  examples: |
+    - help
+    - I need help
+    - can you help me?
+    - what can you do?
+    - how can you help me?
+    - what are your capabilities?
+    - what can you help me with?
+    - I need assistance
+    - can you assist me?
+    - what do you do?
+
+- intent: ask_weather
+  examples: |
+    - what's the weather like?
+    - how's the weather?
+    - is it going to rain?
+    - will it be sunny?
+    - what's the temperature?
+    - is it cold outside?
+    - is it hot today?
+    - do I need an umbrella?
+    - what's the forecast?
+    - weather forecast
+
+- intent: ask_time
+  examples: |
+    - what time is it?
+    - what's the time?
+    - do you know the time?
+    - can you tell me the time?
+    - what's the current time?
+    - time please
+    - current time
+    - what time do you have?
+    - do you have the time?
+    - time check
