@@ -11,3 +11,29 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Respond to help request
+  steps:
+  - intent: ask_help
+  - action: utter_help
+
+- rule: Respond to weather request
+  steps:
+  - intent: ask_weather
+  - action: utter_weather
+
+- rule: Respond to time request
+  steps:
+  - intent: ask_time
+  - action: utter_time
+
+- rule: Respond to mood great
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+
+- rule: Respond to mood unhappy
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help

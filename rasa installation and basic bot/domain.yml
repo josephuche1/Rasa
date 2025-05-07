@@ -8,26 +8,52 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_help
+  - ask_weather
+  - ask_time
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hello! I'm Shorekeeper Assistant. How can I help you today?"
+  - text: "Hi there! I'm Shorekeeper Assistant. What can I do for you?"
+  - text: "Greetings! I'm Shorekeeper Assistant. How may I assist you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Let me try to make you feel better:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
   - text: "Did that help you?"
+  - text: "Is there anything else I can do to help?"
+  - text: "Would you like me to try something else?"
 
   utter_happy:
   - text: "Great, carry on!"
+  - text: "Excellent! Keep up the good mood!"
+  - text: "That's wonderful to hear!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Goodbye! Have a great day!"
+  - text: "See you later! Take care!"
+  - text: "Bye! Come back anytime you need help!"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am Shorekeeper Assistant, an AI-powered chatbot created to help you. How can I assist you today?"
+  - text: "Yes, I'm an AI assistant, but I'm here to help you with your needs. What can I do for you?"
+
+  utter_help:
+  - text: "I can help you with various tasks! I can tell you the time, check the weather, or just chat with you. What would you like to know?"
+  - text: "I'm here to assist you! I can provide information about time, weather, or engage in conversation. What interests you?"
+
+  utter_weather:
+  - text: "I'm sorry, I don't have access to real-time weather data yet. Would you like me to help you with something else?"
+  - text: "I'm not currently connected to a weather service. Is there something else I can help you with?"
+
+  utter_time:
+  - text: "I'm sorry, I don't have access to real-time clock data yet. Would you like me to help you with something else?"
+  - text: "I'm not currently connected to a time service. Is there something else I can help you with?"
 
 session_config:
   session_expiration_time: 60
