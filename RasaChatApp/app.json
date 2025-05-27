@@ -1,4 +1,18 @@
 {
+  "expo": {
   "name": "RasaChatApp",
-  "slug": "RasaChatApp"
+    "slug": "RasaChatApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.shorekeeper.rasachat"
+    }
+  }
 }
