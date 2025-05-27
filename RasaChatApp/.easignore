@@ -1,0 +1,36 @@
+# Node modules (will be installed during the build)
+node_modules/
+
+# Metro bundler cache
+.expo/
+
+# Build artifacts
+build/
+dist/
+web-build/
+
+# OS and IDE-specific files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test files and logs
+coverage/
+*.log
+*.test.*
+*.spec.*
+
+# Git
+.git/
+.gitignore
+
+# Environment or config files you don't want in the build
+.env
+.env.local
+.env.*.local
+eas.json (optional, if you want to manage secrets separately)
+
+# Other
+README.md
+docs/

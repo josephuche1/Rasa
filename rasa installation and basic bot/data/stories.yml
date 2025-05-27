@@ -1,30 +1,55 @@
+# RASA Stories Configuration
+# This file defines the conversation flows that the chatbot can handle
+# Each story represents a possible path of conversation
+
 version: "3.1"
 
 stories:
 
+# Basic greeting and positive mood conversation
 - story: happy path
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: greet          # User greets the bot
+  - action: utter_greet    # Bot responds with greeting
+  - intent: mood_great     # User expresses positive mood
+  - action: utter_happy    # Bot responds positively
 
+# Conversation path for user expressing sadness and accepting help
 - story: sad path 1
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: greet          # User greets the bot
+  - action: utter_greet    # Bot responds with greeting
+  - intent: mood_unhappy   # User expresses negative mood
+  - action: utter_cheer_up # Bot tries to cheer up user
+  - action: utter_did_that_help  # Bot asks if it helped
+  - intent: affirm         # User confirms it helped
+  - action: utter_happy    # Bot responds positively
 
+# Conversation path for user expressing sadness and declining help
 - story: sad path 2
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: greet          # User greets the bot
+  - action: utter_greet    # Bot responds with greeting
+  - intent: mood_unhappy   # User expresses negative mood
+  - action: utter_cheer_up # Bot tries to cheer up user
+  - action: utter_did_that_help  # Bot asks if it helped
+  - intent: deny           # User says it didn't help
+  - action: utter_goodbye  # Bot says goodbye
+
+# Weather conversation when location is provided
+- story: weather with location
+  steps:
+  - intent: ask_weather
+    entities:
+    - location: "London"   # Example location
+  - action: action_get_weather
+
+# Weather conversation when location is not provided
+- story: weather without location
+  steps:
+  - intent: ask_weather    # User asks about weather without location
+  - action: utter_ask_location  # Bot asks for location
+  - intent: inform_location
+    entities:
+    - location: "Paris"    # Example location
+  - action: action_get_weather

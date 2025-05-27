@@ -154,6 +154,16 @@ nlu:
 
 - intent: ask_weather
   examples: |
+    - what's the weather like in [London](location)?
+    - how's the weather in [New York](location)?
+    - is it going to rain in [Tokyo](location)?
+    - will it be sunny in [Paris](location)?
+    - what's the temperature in [Berlin](location)?
+    - is it cold in [Moscow](location)?
+    - is it hot in [Dubai](location)?
+    - do I need an umbrella in [Sydney](location)?
+    - what's the forecast for [Toronto](location)?
+    - weather forecast for [Rome](location)
     - what's the weather like?
     - how's the weather?
     - is it going to rain?
@@ -164,6 +174,29 @@ nlu:
     - do I need an umbrella?
     - what's the forecast?
     - weather forecast
+
+- intent: inform_location
+  examples: |
+    - [London](location)
+    - [New York](location)
+    - [Tokyo](location)
+    - [Paris](location)
+    - [Berlin](location)
+    - [Moscow](location)
+    - [Dubai](location)
+    - [Sydney](location)
+    - [Toronto](location)
+    - [Rome](location)
+    - [Los Angeles](location)
+    - [Chicago](location)
+    - [Singapore](location)
+    - [Hong Kong](location)
+    - [Seoul](location)
+    - [Mumbai](location)
+    - [Cairo](location)
+    - [Rio de Janeiro](location)
+    - [Cape Town](location)
+    - [Amsterdam](location)
 
 - intent: ask_time
   examples: |

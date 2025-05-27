@@ -138,6 +138,12 @@ export const Chat: React.FC = () => {
             placeholder="Type a message..."
             placeholderTextColor={COLORS.lightText}
             multiline
+            autoFocus={false}
+            keyboardType="default"
+            returnKeyType="send"
+            blurOnSubmit={false}
+            onSubmitEditing={handleSend}
+            enablesReturnKeyAutomatically={true}
           />
           <TouchableOpacity
             style={[styles.sendButton, (!inputText.trim() || isLoading) && styles.sendButtonDisabled]}

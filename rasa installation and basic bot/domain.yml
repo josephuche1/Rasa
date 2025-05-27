@@ -1,17 +1,25 @@
+# RASA Domain Configuration File
+# This file defines the chatbot's capabilities, responses, and actions
+
 version: "3.1"
 
+# Define all intents that the chatbot can recognize
+# Intents are the different types of user inputs the bot can understand
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - ask_help
-  - ask_weather
-  - ask_time
+  - greet          # User greeting (hello, hi, etc.)
+  - goodbye        # User saying goodbye
+  - affirm         # User agreeing/confirming
+  - deny           # User disagreeing/denying
+  - mood_great     # User expressing positive mood
+  - mood_unhappy   # User expressing negative mood
+  - bot_challenge  # User questioning if bot is human
+  - ask_help       # User asking for help
+  - ask_weather    # User asking about weather
+  - inform_location # User providing location for weather
+  - ask_time       # User asking for current time
 
+# Define all possible responses the chatbot can give
+# Each response can have multiple variations for natural conversation
 responses:
   utter_greet:
   - text: "Hello! I'm Shorekeeper Assistant. How can I help you today?"
@@ -47,14 +55,29 @@ responses:
   - text: "I can help you with various tasks! I can tell you the time, check the weather, or just chat with you. What would you like to know?"
   - text: "I'm here to assist you! I can provide information about time, weather, or engage in conversation. What interests you?"
 
-  utter_weather:
-  - text: "I'm sorry, I don't have access to real-time weather data yet. Would you like me to help you with something else?"
-  - text: "I'm not currently connected to a weather service. Is there something else I can help you with?"
+  utter_ask_location:
+  - text: "Which city would you like to know the weather for?"
+  - text: "Please tell me which location you want the weather information for."
+  - text: "I can check the weather for any city. Which one would you like to know about?"
 
   utter_time:
   - text: "I'm sorry, I don't have access to real-time clock data yet. Would you like me to help you with something else?"
   - text: "I'm not currently connected to a time service. Is there something else I can help you with?"
 
+# Define custom actions that the chatbot can perform
+# These are Python functions that handle complex tasks
+actions:
+  - action_get_weather
+
+# Session configuration
+# Controls how long conversations are remembered
 session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  session_expiration_time: 60  # Session expires after 60 minutes
+  carry_over_slots_to_new_session: true  # Remember information between sessions
+
+# Define slots (variables) that the chatbot can use to store information
+slots:
+  location:
+    type: text
+    mappings:
+    - type: custom
